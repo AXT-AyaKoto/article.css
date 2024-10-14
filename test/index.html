@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AXT-AyaKoto/article.css Test</title>
+    <link rel="stylesheet" href="/main.css">
+</head>
+
+<body>
+    <article>
+        <h1 id="表示のテスト">表示のテスト</h1>
+        <h2 id="41-区切り線">4.1 区切り線</h2>
+        <hr>
+        <hr>
+        <hr>
+        <h2 id="42-見出し">4.2 見出し</h2>
+        <h3 id="h3">h3</h3>
+        <h4 id="h4">h4</h4>
+        <h5 id="h5">h5</h5>
+        <h6 id="h6">h6</h6>
+        <h2 id="44-コードブロックのインデント記法">4.4 コードブロックのインデント記法</h2>
+        <pre><code>a simple
+        indented code block</code></pre>
+        <h2 id="45-コードブロックのフェンシング記法">4.5 コードブロックのフェンシング記法</h2>
+        <pre><code class="language-js">console.log(&quot;Hello, World!&quot;);</code></pre>
+        <pre><code class="language-html">&lt;!-- チルダもOK --&gt;</code></pre>
+        <h2 id="47-リンク参照記法">4.7 リンク参照記法</h2>
+        <p><a href="https://example.com" title="example">foo</a></p>
+        <h2 id="48-段落">4.8 段落</h2>
+        <p>段落〜〜〜<br>改行できる</p>
+        <p>ここは別の段落</p>
+        <h2 id="410-表">4.10 表</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>foo</th>
+                    <th>bar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>baz</td>
+                    <td>bim</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 id="51-引用ブロック">5.1 引用ブロック</h2>
+        <blockquote>
+            <p>段落</p>
+        </blockquote>
+        <blockquote>
+            <blockquote>
+                <p>二重</p>
+            </blockquote>
+        </blockquote>
+        <h2 id="52-リスト">5.2 リスト</h2>
+        <ul>
+            <li>箇条書き</li>
+            <li>できるって</li>
+            <li>大事</li>
+        </ul>
+        <ul>
+            <li>別の</li>
+            <li>箇条書き</li>
+        </ul>
+        <ul>
+            <li>使える記号は3種類</li>
+        </ul>
+        <ol>
+            <li>順序付きも</li>
+            <li>できる<ul>
+                    <li>ネストしても<ul>
+                            <li>OK</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+        <ol>
+            <li>GFM</li>
+            <li>これでもいいらしい</li>
+        </ol>
+        <h2 id="53-タスクリスト">5.3 タスクリスト</h2>
+        <ul>
+            <li><input disabled="" type="checkbox"> foo</li>
+            <li><input checked="" disabled="" type="checkbox"> bar<ul>
+                    <li><input checked="" disabled="" type="checkbox"> baz</li>
+                </ul>
+            </li>
+        </ul>
+        <h2 id="61-エスケープいろいろ">6.1 エスケープいろいろ</h2>
+        <p>!&quot;#$%&amp;&#39;()*+,-./:;&lt;=&gt;?@[\]^_`{|}~</p>
+        <p>&nbsp; &amp; &copy; &AElig; &Dcaron;
+            &frac34; &HilbertSpace; &DifferentialD;
+            &ClockwiseContourIntegral; &ngE;</p>
+        <pre><code>&amp; © Æ Ď ¾ ℋ ⅆ ∲ ≧̸</code></pre>
+        <p>&#35; &#1234; &#992; &#0;</p>
+        <pre><code># Ӓ Ϡ �</code></pre>
+        <h2 id="63-コードスパン">6.3 コードスパン</h2>
+        <p><code>true</code>, <code>false</code></p>
+        <p><code>foo ` bar</code></p>
+        <p>↑「foo ` bar」が表示されてほしい</p>
+        <p>仕様が<code>code{white-space: pre-wrap;}</code>つけとけと言ってた</p>
+        <h2 id="64-強調">6.4 強調</h2>
+        <p><em>斜め</em><br><strong>太字</strong><br><strong><em>両方</em></strong></p>
+        <p><strong><em><code>こういうこともできる</code></em></strong></p>
+        <h2 id="65-取り消し線">6.5 取り消し線</h2>
+        <p><del>消える</del> 消えない, <del>チルダは1つでもいい</del></p>
+        <h2 id="66-リンク">6.6 リンク</h2>
+        <p><a href="https://example.com">text</a><br><a href="https://example.com?test=a%20b">リンク先にスペースを含めたり……</a></p>
+        <p><a href="https://example.com" title="example">bar</a> ←ちょっと前に定義してるのでこれで飛べる</p>
+        <h2 id="67-画像">6.7 画像</h2>
+        <p><img src="https://pbs.twimg.com/media/GWiuGUJaoAUXIBj?format=jpg&name=large" alt="desc">
+            <a href="https://example.com"><img src="https://pbs.twimg.com/media/GWiuGUJaoAUXIBj?format=jpg&name=large"
+                    alt="desc"></a>
+        </p>
+        <h2 id="68-自動リンク">6.8 自動リンク</h2>
+        <p><a href="https://example.com">https://example.com</a></p>
+        <p><a href="http://www.example.com">www.example.com</a> ←これも拡張機能で通る？</p>
+    </article>
+</body>
+
+</html>

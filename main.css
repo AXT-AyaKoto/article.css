@@ -1,0 +1,189 @@
+/*
+ * AXT-AyaKoto/article.css
+ * A simple article style by AXT-AyaKoto.
+ * copyright (c) 2024- Ayasaka-Koto, All rights reserved.
+ * @see {https://github.com/AXT-AyaKoto/article.css}
+ */
+
+:where(article, .article) {
+    font-size: 1em;
+    padding: .5em;
+    border-radius: .5em;
+    border: 1px solid oklch(from currentColor l c h / .5);
+    position: relative;
+
+    & *:has(>*>img) {
+        width: fit-content;
+    }
+
+    &>*+* {
+        margin-top: 1em;
+    }
+
+    /* ==== 各要素に適用するスタイル ==== */
+    & :where(h1, h2, h3, h4, h5, h6) {
+        padding-left: .25em;
+        border-bottom: 2px solid oklch(from currentColor l c h / .5);
+
+        &:not(:first-child) {
+            margin-top: 1.5em;
+        }
+    }
+
+    & :where(h1) {
+        border-left: calc(1em * 9 / 18) solid oklch(from currentColor l c h / .5);
+        font-size: calc(1em * 21 / 12);
+        font-weight: 600;
+    }
+
+    & :where(h2) {
+        border-left: calc(1em * 8 / 18) solid oklch(from currentColor l c h / .5);
+        font-size: calc(1em * 19 / 12);
+        font-weight: 600;
+    }
+
+    & :where(h3) {
+        border-left: calc(1em * 7 / 18) solid oklch(from currentColor l c h / .5);
+        font-size: calc(1em * 17 / 12);
+        font-weight: 600;
+    }
+
+    & :where(h4) {
+        border-left: calc(1em * 6 / 18) solid oklch(from currentColor l c h / .5);
+        font-size: calc(1em * 15 / 12);
+        font-weight: 500;
+    }
+
+    & :where(h5) {
+        border-left: calc(1em * 5 / 18) solid oklch(from currentColor l c h / .5);
+        font-size: calc(1em * 14 / 12);
+        font-weight: 500;
+    }
+
+    & :where(h6) {
+        border-left: calc(1em * 4 / 18) solid oklch(from currentColor l c h / .5);
+        font-size: calc(1em * 13 / 12);
+        font-weight: 500;
+    }
+
+    & :where(hr) {
+        display: block;
+        width: 80%;
+        height: .25em;
+        background-color: oklch(from currentColor l c h / .33);
+        border: none;
+        border-radius: calc(infinity * 1px);
+        margin-inline: auto;
+    }
+
+    & :where(img) {
+        display: block;
+        max-width: 100%;
+        max-height: 25vh;
+        height: auto;
+        border-radius: 1em;
+    }
+
+    & :where(a) {
+        text-decoration: none;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: .15em;
+            border-radius: .25em;
+            background-color: oklch(from currentColor l 0.07 240 / calc(2 / 6));
+            transition: all .25s;
+        }
+
+        &:not(:has(img)) {
+            padding-inline: .25em;
+        }
+
+        &:hover::before {
+            background-color: oklch(from currentColor l 0.07 240 / calc(1 / 6));
+            height: 100%;
+        }
+    }
+
+    & :is(pre code) {
+        display: block;
+        padding: .5em;
+        border-radius: .5em;
+        border: 1px solid oklch(from currentColor l c h / .5);
+        font: 300 1em/1.25 "M PLUS 1 Code", monospace;
+
+        &.hljs {
+            padding-top: 1.5em;
+            position: relative;
+
+            &::before {
+                content: "code";
+                position: absolute;
+                height: 1em;
+                min-width: 4em;
+                font: 300 .8em/1em "Ubuntu", monospace;
+                text-align: center;
+                top: 0;
+                left: 0;
+                padding: .25em;
+                padding-inline: 1em;
+                border-radius: .5em 0;
+                background-color: oklch(from currentColor l c h / .5);
+            }
+
+            &.language-html::before {
+                content: "HTML";
+            }
+
+            &.language-css::before {
+                content: "CSS";
+            }
+
+            &.language-js::before {
+                content: "JavaScript";
+            }
+        }
+    }
+
+    & :where(blockquote) {
+        padding: .5em;
+        border-left: .5em solid oklch(from currentColor 0.60 c h / .9);
+        background-color: oklch(from currentColor 0.40 c h / .5);
+        border-radius: .5em;
+
+        & * {
+            color: oklch(from currentColor 0.85 c h);
+        }
+    }
+
+    & :where(ul, ol) {
+        padding-inline-start: 2em;
+    }
+
+    & :where(table) {
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+
+        & :where(thead) {
+            background-color: oklch(from currentColor l c h / calc(1 / 6));
+        }
+
+        & :where(th, td) {
+            padding: .25em .5em;
+            border: 1px solid oklch(from currentColor l c h / .5);
+        }
+    }
+
+    & :where(code) {
+        padding: 0 .5em;
+        border-radius: .5em;
+        background-color: oklch(from currentColor l c h / .1);
+        font-family: "M PLUS 1 Code", monospace;
+    }
+}
