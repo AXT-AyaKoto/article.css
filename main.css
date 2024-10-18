@@ -156,7 +156,6 @@
         border-radius: .5em;
         border: 1px solid oklch(from currentColor l c h / .5);
         background-color: oklch(from currentColor l c h / .1);
-        font: 300 1em/1.25 "M PLUS 1 Code", monospace;
         padding-top: 1.5em;
         position: relative;
 
@@ -166,7 +165,7 @@
             font-style: italic;
             height: 1em;
             min-width: 4em;
-            font: 300 .8em/1em "Ubuntu", monospace;
+            font: 400 .8em/1em "Ubuntu";
             text-align: center;
             top: 0;
             left: 0;
