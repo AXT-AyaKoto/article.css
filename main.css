@@ -151,13 +151,30 @@
     }
 
     & :where(blockquote) {
+        display: block;
         padding: .5em;
-        border-left: .5em solid oklch(from currentColor 0.60 c h / .9);
-        background-color: oklch(from currentColor 0.40 c h / .5);
         border-radius: .5em;
+        border: 1px solid oklch(from currentColor l c h / .5);
+        background-color: oklch(from currentColor l c h / .1);
+        font: 300 1em/1.25 "M PLUS 1 Code", monospace;
+        padding-top: 1.5em;
+        position: relative;
 
-        & * {
-            color: oklch(from currentColor 0.85 c h);
+        &::before {
+            content: "blockquote";
+            position: absolute;
+            font-style: italic;
+            height: 1em;
+            min-width: 4em;
+            font: 300 .8em/1em "Ubuntu", monospace;
+            text-align: center;
+            top: 0;
+            left: 0;
+            padding: .25em;
+            padding-inline: 1em;
+            border-radius: .5em 0;
+            color: oklch(from currentColor calc(1 - l) c h / .9);
+            background-color: oklch(from currentColor calc(1 - l) c h / .5);
         }
     }
 
